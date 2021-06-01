@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+ var options = ["r", "p", "s"];
+ var wins =0;
+ var loses =0;
+ var ties =0;
+ for (var i =0; i < 1; i++) {
+// Generate a random selection for the computer choice -select r, p, s
+    var optionNum = Math.floor(Math.random() * 3);
+    var computerChoice = options[optionNum];
+    console.log("Computer Choice: " + computerChoice);
+// Every round we want to prompt the user to select r , p , s
+    var userChoice = prompt("Choose rock, paper, or scissors by typing in r, p, s?"); 
+
+    console.log("User Choice: " + userChoice);
+// Every round we want to check the condition of what has been chosen
+ if (userChoice == computerChoice) {
+        alert("You tied!");
+     }  
+    
+else if (userChoice == "p" && computerChoice == "r") {   
+    alert("You won!");
+}  
+ 
+else if (userChoice == "r" && computerChoice == "p") {   
+    alert("You lost!");
+}  
+else if (userChoice == "s" && computerChoice == "p") {   
+    alert("You won!");
+}  
+else if (userChoice == "p" && computerChoice == "s") {   
+    alert("You lost!");
+}  
+else if (userChoice == "r" && computerChoice == "s") {   
+    alert("You won!");
+}  
+else if (userChoice == "s" && computerChoice == "r") {   
+    alert("You lost!");
+}  
+
+
+
+// Depending on the combination of what was chosen, we're going to increment wins, losses, ties
+// Alert the user if they won, lost, or tied and their stats (current w, l, t)
+
+
+ }
+
+ 
+
+
+
+
+
+
+</script>
+</body>
+</html>
