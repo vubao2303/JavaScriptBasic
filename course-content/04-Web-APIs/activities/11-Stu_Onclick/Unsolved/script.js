@@ -1,34 +1,16 @@
-// var currentCount = 
-// <button onclick="decrement()">Decrement</button>
-
-
-// document.getElementById("decrement").addEventListener("click", currenrCount);
-// document.getElementById("increment").addEventListener("click", currentCount);
 
 let count = 0;
-let countEl = $("#count");
-
-function setCount() {
-    console.log(countEl)
-    countEl.text(count)
-};
-
-// click A
+// on click function. querySelector = $("") and addEventListener = on(click, function)
 $("#increment").on("click", function () {
     count++;
-    setCount();
+    $("#count").text(count)
 })
 
-// // click B
-// $("#increment").on("click", function () {
-//     count++;
-//     countEl.text(count)
-// })
+$("#decrement").on("click", function () {
+    count--;
+    $("#count").text(count)
+    if (count < 0) {
+        $("#count").text(0)
+    }
+})
 
-
-
-// const inc = document.querySelector("#increment");
-
-// inc.addEventListener("click", function () {
-//     alert: "hello"
-// });
