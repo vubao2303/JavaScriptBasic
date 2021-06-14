@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
 
   <h1>Drink Selection!</h1>
@@ -28,12 +30,18 @@
 
     // Using JavaScript programmatically append each drinkList item to the "drink-options" div
     // HINT: you will need a for loop to go over each element in the list
-  var drinks = $("#drink-options")
-  for (i = 0; i < drinkList.length; i++){
-    drinks.append(drinkList[i])
-  }
+    var drinks = $("#drink-options")
+    // this will show all the drinks in a line 
+    for (i = 0; i < drinkList.length; i++) {
+      drinks.append(drinkList[i])
+    }
+    // this will show all the drink in a unorder list 
+    $.each(drinkList, function (i, drink) {
+      drinks.append('<ul>' + drink + '</ul>')
+    })
 
   </script>
 
 </body>
+
 </html>
